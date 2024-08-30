@@ -1,11 +1,14 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
+
+type Enum int
 
 func main() {
-	var searchEntries []SearchEntry = parseCsv(FILE_WITH_PATH)
+	var searchEntryCollection SearchEntryCollection = parseCsv(FILE_WITH_PATH)
 
-	fmt.Println(searchEntries)
+	searchEntryCollection.getAllFieldValues(QUERY)
+
+	target := searchEntryCollection.getAllFieldValues(TARGET)
+	fmt.Println(target)
 }

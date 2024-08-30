@@ -11,3 +11,11 @@ type SearchEntry struct {
 	Target string
 	//ip     string
 }
+
+const (
+	TIME Enum = iota
+	QUERY
+	URL
+	HITS
+	TARGET
+)
