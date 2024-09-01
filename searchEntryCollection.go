@@ -2,7 +2,7 @@ package main
 
 type SearchEntryCollection []SearchEntry
 
-func (collection SearchEntryCollection) getAllFieldValues(field Enum) []string {
+func (collection SearchEntryCollection) getAllFieldValues(field EnumSearchSpecific) []string {
 	var fieldValues []string
 
 	for _, searchItem := range collection {

@@ -12,8 +12,10 @@ type SearchEntry struct {
 	//ip     string
 }
 
+type EnumSearchSpecific int
+
 const (
-	TIME Enum = iota
+	TIME EnumSearchSpecific = iota
 	QUERY
 	URL
 	HITS

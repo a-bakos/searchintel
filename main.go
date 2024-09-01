@@ -2,10 +2,8 @@ package main
 
 import "fmt"
 
-type Enum int
-
 func main() {
-	var searchEntryCollection SearchEntryCollection = parseCsv(FILE_WITH_PATH)
+	var searchEntryCollection SearchEntryCollection = parseCsv(RAW_INPUT_FILE_WITH_PATH)
 
 	searchEntryCollection.getAllFieldValues(QUERY)
 
