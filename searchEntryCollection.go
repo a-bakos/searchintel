@@ -25,3 +25,8 @@ func (collection SearchEntryCollection) getAllFieldValues(field EnumSearchSpecif
 
 	return fieldValues
 }
+
+// TODO
+//OrderByCount,
+//OrderByTarget,
+//TopKeywords,
