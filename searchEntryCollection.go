@@ -30,3 +30,13 @@ func (collection SearchEntryCollection) getAllFieldValues(field EnumSearchSpecif
 //OrderByCount,
 //OrderByTarget,
 //TopKeywords,
+
+func (collection SearchEntryCollection) getTopKeywords() map[string]int {
+	topKeywords := make(map[string]int)
+
+	for _, searchItem := range collection {
+		topKeywords[searchItem.Query]++
+	}
+
+	return topKeywords
+}

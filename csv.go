@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/csv"
-	"fmt"
 	"os"
 )
 
@@ -21,7 +20,7 @@ func parseCsv(fileWithPath string) []SearchEntry {
 		panic("Error")
 	}
 
-	fmt.Println(records)
+	//fmt.Println(records)
 
 	for i, line := range records {
 		if i == INDEX_FIRST_ROW { // skip first row

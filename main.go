@@ -7,6 +7,9 @@ func main() {
 
 	searchEntryCollection.getAllFieldValues(QUERY)
 
-	target := searchEntryCollection.getAllFieldValues(TARGET)
-	fmt.Println(target)
+	//target := searchEntryCollection.getAllFieldValues(TARGET)
+	//fmt.Println(target)
+
+	topkws := searchEntryCollection.getTopKeywords()
+	fmt.Println(topkws)
 }
