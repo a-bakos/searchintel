@@ -38,5 +38,11 @@ func (collection SearchEntryCollection) getTopKeywords() map[string]int {
 		topKeywords[searchItem.Query]++
 	}
 
+	byCount := make(map[int][]string)
+	// sort map by value
+	for key, count := range topKeywords {
+		// todo
+	}
+
 	return topKeywords
 }
