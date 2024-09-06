@@ -10,6 +10,8 @@ func main() {
 	//target := searchEntryCollection.getAllFieldValues(TARGET)
 	//fmt.Println(target)
 
-	topkws := searchEntryCollection.getTopKeywords()
+	topkws := searchEntryCollection.countKeywords()
 	fmt.Println(topkws)
+
+	topkws.orderByCount()
 }
