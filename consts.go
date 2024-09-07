@@ -8,4 +8,6 @@ const INDEX_FIRST_ROW int = 0
 const KEYWORD_MIN_LENGTH int = 3
 const KEYWORD_MAX_LENGTH int = 100
 
-const STORE_INVALID_ITEMS bool = false
+const STORE_INVALID_ITEMS bool = true
+
+const DEFAULT_MISSING_ID = 0

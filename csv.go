@@ -28,11 +28,11 @@ func parseCsv(fileWithPath string) []SearchEntry {
 		}
 
 		searchEntries = append(searchEntries, SearchEntry{
-			stringToInt32(line[0]),
+			getTheId(line[0]),
 			line[1],
 			line[2],
 			urlDecode(line[3]),
-			stringToInt32(line[4]),
+			getTheId(line[4]),
 			urlDecode(line[8])})
 	}
 

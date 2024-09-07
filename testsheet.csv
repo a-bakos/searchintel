@@ -1,5 +1,5 @@
 "id","time","query","url","hits","user","email","temp_id","target","ip"
-"146231","2021-01-21 10:31:09","cat food","https%3A%2F%2Fwww.example.com","42","","john@example.com","02714fd908","https://www.example.com/product1","192.168.1.1"
+"","2021-01-21 10:31:09","cat food","https%3A%2F%2Fwww.example.com","42","","john@example.com","02714fd908","https://www.example.com/product1","192.168.1.1"
 "146232","2021-01-21 11:42:15","Dog Food","https%3A%2F%2Fwww.example.com","37","","","ec1e030b3a","https://www.example.com/product2","192.168.1.2"
 "146233","2021-01-21 13:03:27","apple","https%3A%2F%2Fwww.example.com/apple","19","","jane@example.com","42977bad74","https://www.example.com/apple/red","192.168.1.3"
 "146234","2021-01-21 14:15:40","banana","https%3A%2F%2Fwww.example.com/banana","29","","","02714fd908","https://www.example.com/banana/yellow","192.168.1.4"

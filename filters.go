@@ -1,26 +1,35 @@
 package main
 
 import (
-	"fmt"
 	"net/url"
 	"strconv"
 )
 
-// Parse string as int32
-func stringToInt32(theString string) int32 {
-	idInt, err := strconv.ParseInt(theString, 10, 64)
+func stringToInt32(theString string) (int32, error) {
+	idInt, err := strconv.ParseInt(theString, 10, 32)
 	if err != nil {
-		fmt.Println(err)
+		return 0, err
 	}
 
-	return int32(idInt)
+	return int32(idInt), nil
+}
+
+func getTheId(idAsString string) int32 {
+	id, err := stringToInt32(idAsString)
+	if err != nil {
+		return DEFAULT_MISSING_ID
+	}
+
+	return id
 }
 
 func urlDecode(encodedUrl string) string {
 	decodedUrl, err := url.QueryUnescape(encodedUrl)
 
 	if err != nil {
-		panic(err)
+		return ""
+		// fmt.Println(encodedUrl)
+		// panic(err)
 	}
 
 	return decodedUrl
