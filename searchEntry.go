@@ -37,13 +37,3 @@ func (searchEntry SearchEntry) clean() SearchEntry {
 		Url:    urlSource,
 		Target: urlTarget}
 }
-
-type EnumSearchSpecific int
-
-const (
-	TIME EnumSearchSpecific = iota
-	QUERY
-	URL
-	HITS
-	TARGET
-)
