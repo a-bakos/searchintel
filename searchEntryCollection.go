@@ -10,11 +10,17 @@ func (rawCollection RawSearchEntryCollection) cleanEntries() (SearchEntryCollect
 
 	for _, searchItem := range rawCollection {
 
-		// check validity of searchItem
+		searchItem = searchItem.clean()
+
 		if searchItem.isValid() {
 			cleanCollection = append(cleanCollection, searchItem)
+
+			// TODO if searchItem.isSearchDoi // handle DOI search
+			// This will probably live elsewhere
+			// DOI's start with 10.xxxx, where x = a digit
+			// (?i)10.\d{4}
+
 		} else {
-			// if invalid
 			if STORE_INVALID_ITEMS {
 				skippedCollection = append(skippedCollection, searchItem)
 			}

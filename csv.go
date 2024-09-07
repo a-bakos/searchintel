@@ -31,9 +31,9 @@ func parseCsv(fileWithPath string) []SearchEntry {
 			getTheId(line[0]),
 			line[1],
 			line[2],
-			urlDecode(line[3]),
+			line[3],
 			getTheId(line[4]),
-			urlDecode(line[8])})
+			line[8]})
 	}
 
 	return searchEntries

@@ -1,5 +1,7 @@
 package main
 
+import "strings"
+
 type SearchEntry struct {
 	Id    int32
 	Time  string
@@ -14,17 +16,26 @@ type SearchEntry struct {
 
 func (searchEntry SearchEntry) isValid() bool {
 
-	return false
+	// todo see if searchEntry.Query contains invalid things
+
+	return isValidLength(searchEntry.Query)
 }
 
 func (searchEntry SearchEntry) clean() SearchEntry {
 
+	keyword := strings.TrimSpace(searchEntry.Query)
+	keyword = strings.ToLower(keyword)
+	keyword = maybeStripReplace(keyword)
+
+	urlSource := urlDecode(searchEntry.Url)
+	urlTarget := urlDecode(searchEntry.Target)
+
 	return SearchEntry{
 		Id:     searchEntry.Id,
 		Time:   searchEntry.Time,
-		Query:  searchEntry.Query,
-		Url:    searchEntry.Url,
-		Target: searchEntry.Target}
+		Query:  keyword,
+		Url:    urlSource,
+		Target: urlTarget}
 }
 
 type EnumSearchSpecific int

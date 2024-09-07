@@ -9,11 +9,13 @@ func main() {
 	var skippedCollection SkippedEntryCollection
 	cleanCollection, skippedCollection = rawCollection.cleanEntries()
 
-	fmt.Println(cleanCollection)
-
 	if STORE_INVALID_ITEMS {
+		fmt.Println(" SKIPPED ITEMS ")
 		fmt.Println(skippedCollection)
 	}
+
+	fmt.Println(" CLEAN COLLECTION ")
+	fmt.Println(cleanCollection)
 
 	//rawSearchEntryCollection.getAllFieldValues(QUERY)
 
