@@ -1,6 +1,6 @@
 package main
 
-const RAW_INPUT_FILE_WITH_PATH string = "testsheet.csv"
+const RAW_INPUT_FILE_WITH_PATH string = "csv/testsheet.csv"
 const OUTPUT_FILE_WITH_PATH string = ""
 
 const INDEX_FIRST_ROW int = 0

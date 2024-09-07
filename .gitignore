@@ -31,3 +31,5 @@ coverage.out
 
 # Binary artifacts
 bin/
+
+csv/testsheet2.csv
